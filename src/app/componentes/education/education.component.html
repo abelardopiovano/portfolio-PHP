@@ -1,0 +1,71 @@
+<div class="education-block--">
+    <br>
+    <br>
+    <br>
+  
+    
+    
+    <div id="lead--" style="background-color: transparent; text-align: center; " >
+      <h2 class="heading" style="color: rgb(168, 187, 204);">EDUCACIÓN</h2>
+      
+      <div class="separador">
+      <a [ngClass]="{'editorbtn1':valida2,'editorbtn2':!valida2}" [routerLink]="['/agrega-educacion']"><i class="fa-solid fa-plus fa-2xl"></i></a>
+      </div>
+      
+      <li *ngFor="let educacion of EducacionList">
+        
+      
+        <div class="education-block" style="background-color: rgb(0, 0, 0); opacity: .8;" >
+          <div class="card-header">
+              <div id="box1">
+                <div>
+                  <p>
+                    <a><i  class="fa-solid fa-minus fa-2xl" style="visibility:hidden ;"></i></a>
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 style="color:rgb(101, 124, 160)">{{educacion.nombreInst}}</h3>
+                </div>
+                <div>
+    
+    
+                  
+    
+                  <p>
+                  <a [ngClass]="{'editorbtn1':valida2,'editorbtn2':!valida2}" (click)="borraEducacion(educacion)" [routerLink]="['']"><i class="fa-solid fa-minus fa-2xl"></i></a>
+                
+                  </p>
+                </div> 
+    
+    
+              </div>
+              
+          </div>
+        
+          <div class="card-body">
+            <h4 class="card-title">{{educacion.titulo}}</h4>
+            <p class="card-text">{{educacion.descripcion}}</p>
+            <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+          </div>
+          <!--
+          <div class="card-footer text-muted">
+            -------------------------------------
+            
+          </div>
+        -->
+        </div>
+      </li>
+    
+      
+      
+      
+      
+    
+    
+      
+      
+    </div>
+</div>
+
+

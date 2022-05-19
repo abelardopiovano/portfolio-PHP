@@ -1,0 +1,110 @@
+From 41aed5734e6a7f8aba6b6515997645ebb219d6f1 Mon Sep 17 00:00:00 2001
+From: "Abelardo H. Piovano" <abelardo.piovano@gmail.com>
+Date: Wed, 11 May 2022 17:54:30 -0300
+Subject: FIX LOGIN
+
+
+diff --git a/src/app/app.component.ts b/src/app/app.component.ts
+index 8590c96..72765f7 100644
+--- a/src/app/app.component.ts
++++ b/src/app/app.component.ts
+@@ -12,7 +12,7 @@ export class AppComponent {
+   title = 'Front-End-Angular';
+   valida2=GlobalConstant.valida;
+   constructor(){
+-    console.log(GlobalConstant.valida)
++    //console.log(GlobalConstant.valida)
+   }
+   
+   ngOnInit(){
+diff --git a/src/app/componentes/edita-persona/edita-persona.component.ts b/src/app/componentes/edita-persona/edita-persona.component.ts
+index 4aeb2c6..94f1b37 100644
+--- a/src/app/componentes/edita-persona/edita-persona.component.ts
++++ b/src/app/componentes/edita-persona/edita-persona.component.ts
+@@ -4,6 +4,7 @@ import { PersonaService } from '../../servicios/persona.service';
+ import { NgForm } from '@angular/forms';
+ import { Persona} from '../../modelos/persona';
+ import { __importDefault } from 'tslib';
++import { Router } from '@angular/router';
+ 
+ const httpOptions ={
+   headers: new HttpHeaders({
+@@ -24,6 +25,7 @@ export class EditaPersonaComponent implements OnInit {
+ 
+ 
+   constructor(
++    public router: Router,
+     private personaService: PersonaService
+   ) { }
+   
+@@ -43,6 +45,9 @@ export class EditaPersonaComponent implements OnInit {
+   {
+   this.personaService.putPersonas(formulario.value).subscribe();
+   this.personaService.postPersonas(formulario.value).subscribe();
++  this.router.navigate(['/']);
++
++
+   }
+ 
+  
+diff --git a/src/app/componentes/login/login.component.html b/src/app/componentes/login/login.component.html
+index 952174d..fd471f3 100644
+--- a/src/app/componentes/login/login.component.html
++++ b/src/app/componentes/login/login.component.html
+@@ -10,8 +10,9 @@
+           <input type="password" name="password" id="password" class="form-control"  [(ngModel)]="password">
+         </div>
+         <div class="login2">
+-        <button type="submit" class="btn btn-primary">INGRESAR</button>
+-        <button [routerLink]="['/']" class="btn btn-primary">CANCELAR</button>
++          <button  type="submit" class="btn btn-primary">INGRESAR</button>
++          <button [routerLink]="['/']" class="btn btn-primary">CANCELAR</button>
+         </div>
+       </form>
++      
+ </div>
+\ No newline at end of file
+diff --git a/src/app/componentes/login/login.component.ts b/src/app/componentes/login/login.component.ts
+index b2ad98f..2615674 100644
+--- a/src/app/componentes/login/login.component.ts
++++ b/src/app/componentes/login/login.component.ts
+@@ -1,7 +1,9 @@
+ import { identifierName } from '@angular/compiler';
+ import { Component, Input, OnInit } from '@angular/core';
+ import { NgForm, NgModel} from '@angular/forms';
++import { NavigationStart, RouteConfigLoadStart, RouterLink } from '@angular/router';
+ import { GlobalConstant } from '../../GlobalConstant';
++import { Router } from '@angular/router';
+ @Component({
+   selector: 'app-login',
+   templateUrl: './login.component.html',
+@@ -14,11 +16,9 @@ import { GlobalConstant } from '../../GlobalConstant';
+ export class LoginComponent implements OnInit {
+   usuario:string="";
+   password:string="";
+-  valida2=GlobalConstant.valida
++ 
+ 
+-  constructor() { 
+-    
+-  }
++  constructor(public router: Router){}
+ 
+   ngOnInit(): void {
+   }
+@@ -31,10 +31,13 @@ export class LoginComponent implements OnInit {
+     {
+             
+         GlobalConstant.valida=!GlobalConstant.valida
++        //RouterLink.toString()
+         
+-    }
++        //console.log(GlobalConstant.valida)
++        alert("Ha entrado en modo de edición");
++        this.router.navigate(["/"]);
+     
+-
++    }
+  //console.log(this.usuario);
+  //console.log(this.password);
+ }

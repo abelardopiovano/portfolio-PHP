@@ -1,0 +1,66 @@
+<br>
+<br>
+<br>
+
+<div class="titulo1">
+    <h2 class="heading" style="color: rgb(168, 187, 204);">PROYECTOS</h2>
+</div>
+ 
+<div class="container">
+    <div style="text-align:center" >
+        <a [ngClass]="{'editorbtn1':valida2,'editorbtn2':!valida2}" [routerLink]="['/agrega-proyecto']"><i class="fa-solid fa-plus fa-2xl"></i></a>
+    </div>
+
+    
+    <div>
+    <li *ngFor="let proyecto of ProyectoList">
+        <div>
+            <div class="row-1">
+                <div class="project shadow-large-1">
+                    <div class="izq-box">
+                        <div class="project-image">
+                            <img src={{proyecto.url_imagen}} />
+                        </div>
+                    </div>
+                        
+                    <div class="der-box">
+                        <div>
+                            <div class="separador">
+                                <p>
+                                    <a [ngClass]="{'editorbtn1':valida2,'editorbtn2':!valida2}" (click)="borraProyecto(proyecto)" [routerLink]="['']"><i class="fa-solid fa-minus fa-2xl"></i></a>
+                                  
+                                </p>
+                                
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h3>{{proyecto.nombreProyecto}}</h3>
+                        </div>
+                        <div>
+                            <p>{{proyecto.descripcion}}</p>
+                        </div>
+                        <div>
+                            <a href={{proyecto.url_proyecto}}>{{proyecto.url_proyecto}}</a>
+                        </div>
+
+                    </div>
+
+
+                    
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+   
+    
+    </li>
+    </div>

@@ -1,0 +1,49 @@
+.cuerpo
+{
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.titulo1
+{
+    text-align: center;
+    
+}
+
+
+
+
+
+.container-1
+{
+    display: flex;
+    
+}
+
+.row-1
+{
+    text-align: center;
+            
+}
+
+.project shadow-large-1
+{
+    
+    background-color: rgb(92, 92, 15);
+}
+
+.project-image
+{
+    text-align: center;
+}
+
+.separador
+{
+display: flex;
+justify-content:flex-end
+
+}

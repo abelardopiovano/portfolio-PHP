@@ -1,0 +1,68 @@
+<div>
+
+<br>
+<br>
+<br>
+
+
+
+<div id="titulopagina" style="background-color: transparent; text-align: center; " >
+  <h2 class="heading" style="color: rgb(168, 187, 204);">EXPERIENCIA</h2>
+  
+  <div class="separador">
+    <a [ngClass]="{'editorbtn1':valida2,'editorbtn2':!valida2}" [routerLink]="['/agrega-experiencia']"><i class="fa-solid fa-plus fa-2xl"></i></a>
+  </div>
+  
+  <li *ngFor="let experiencia of ExperienciaList">
+    
+  
+    <div class="card text-center" style="opacity: .8;" >
+      <div class="card-header">
+          <div id="box1">
+            <div>
+              <p>
+                <a><i  class="fa-solid fa-minus fa-2xl" style="visibility:hidden ;"></i></a>
+              </p>
+            </div>
+            
+            <div>
+              <p style="color:rgb(107, 15, 15)">{{experiencia.nombreEmpresa}}</p>
+            </div>
+            <div>
+
+
+              
+
+              <p>
+              <a [ngClass]="{'editorbtn1':valida2,'editorbtn2':!valida2}" (click)="borraExperiencia(experiencia)" [routerLink]="['']"><i class="fa-solid fa-minus fa-2xl"></i></a>
+            
+              </p>
+            </div> 
+
+
+          </div>
+          
+      </div>
+    
+      <div class="card-body">
+        <h5 class="card-title">{{experiencia.cargo}}</h5>
+        <p class="card-text">{{experiencia.descripcion}}</p>
+        <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+      </div>
+      <div class="card-footer text-muted">
+        -------------------------------------
+        
+      </div>
+    </div>
+  </li>
+
+  
+  
+  
+  
+
+
+  
+  
+</div>
+</div>

@@ -1,0 +1,26 @@
+#box1
+{
+display: flex;
+
+justify-content: space-between;
+
+
+
+}
+
+.separador
+{
+display: flex;
+justify-content:center;
+
+}
+
+.card-title
+{
+    color: rgb(216, 172, 172);
+}
+
+p
+{
+    color: aqua;
+}

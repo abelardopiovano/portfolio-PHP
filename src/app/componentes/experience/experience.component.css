@@ -1,0 +1,16 @@
+#box1
+{
+display: flex;
+
+justify-content: space-between;
+
+
+
+}
+
+.separador
+{
+display: flex;
+justify-content:flex-end
+
+}

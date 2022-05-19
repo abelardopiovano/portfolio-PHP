@@ -1,0 +1,26 @@
+<div class="cuerpo">
+
+
+<div class="login">
+    <form (ngSubmit)="OnSubmit()" >
+        <div class="mb-3">
+          <label for="USUARIO" class="form-label">USUARIO</label>
+
+          <input type="text" name="usuario" id="usuario" class="form-control"   [(ngModel)]="usuario" placeholder="ARGENTINA">
+
+          
+        </div>
+        <div class="mb-3">
+          <label for="PASSWORD" class="form-label">CONTRASEÑA</label>
+
+          <input type="password" name="password" id="password" class="form-control"  [(ngModel)]="password"placeholder="PROGRAMA">
+
+        </div>
+        <div class="login2">
+          <button  type="submit" class="btn btn-primary">INGRESAR</button>
+          <button class="btn btn-primary"[routerLink]="['/']">CANCELAR</button>
+        </div>
+      </form>
+      
+</div>
+</div>

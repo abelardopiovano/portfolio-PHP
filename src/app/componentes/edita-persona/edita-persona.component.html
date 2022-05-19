@@ -1,0 +1,65 @@
+
+<br>
+<div class="div1">
+
+
+
+
+<form  (ngSubmit)="modificaPersona(formulario)" #formulario="ngForm" novalidate>
+    
+    <!--
+    
+    <div class="form-group">
+      
+        <input name="id" readonly type="text" class="form-control" id="id" aria-describedby="emailHelp" ngModel={{persona.id}} >
+        
+    </div>
+
+    -->
+
+    <div class="form-group">
+      
+      <input name="nombre"  type="text" class="form-control" id="nombre" aria-describedby="emailHelp" ngModel={{persona.nombre}} placeholder="NOMBRE Y APELLIDO">
+      
+    </div>
+    <div class="form-group">
+        
+        <input name="descripcion" type="text" class="form-control" id="descripcion" aria-describedby="emailHelp" ngModel={{persona.descripcion}}  placeholder="DESCRIPCIÓN">
+        
+    </div>
+    <div class="form-group">
+        
+        <input  name="url_cv" type="text" class="form-control" id="url_cv" aria-describedby="emailHelp" ngModel={{persona.url_cv}}  placeholder="URL DEL C.V.">
+        
+    </div>
+
+    
+    <button style="margin: 10px 10px 10px 0px ;" type="submit" class="btn btn-primary" > GUARDAR</button>
+    
+    <button  type="button" class="btn btn-primary" [routerLink]="['/']"> CERRAR</button>
+</form>
+
+<!--
+    <form *ngFor="let persona of Persona">
+    <div class="form-group">
+      
+      <input type="email" class="form-control" id="nombre" aria-describedby="emailHelp" value={{persona.nombre}} placeholder="NOMBRE Y APELLIDO">
+      
+    </div>
+    <div class="form-group">
+        
+        <input type="email" class="form-control" id="descripcion" aria-describedby="emailHelp" value={{persona.descripcion}}  placeholder="Enter email">
+        
+    </div>
+    <div class="form-group">
+        
+        <input type="email" class="form-control" id="url_cv" aria-describedby="emailHelp" value={{persona.url_cv}}  placeholder="Enter email">
+        
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary" (click)="modificaPersona()" >GUARDAR</button>
+</form>
+-->
+
+</div>

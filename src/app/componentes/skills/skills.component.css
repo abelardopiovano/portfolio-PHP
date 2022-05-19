@@ -1,0 +1,60 @@
+.caja1
+{
+    display:flex;
+    
+    
+    /*background-color: black;*/
+    margin: 1%;
+    justify-content: center;
+    
+    
+    
+    
+    
+}
+
+.caja2
+{
+    display: flex;
+    
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+
+.caja3
+{
+    border: 0px cornsilk solid;
+    
+}
+
+
+
+
+.barra
+{
+    
+    display: flex;
+    color: aliceblue;
+    justify-content:space-between;
+
+}
+
+.imagen1
+{
+ height: 100px;
+ width: 100px;
+}
+
+.separador
+{
+    text-align: center;
+}
+
+.caja4
+{
+    display: flex;
+    
+    align-content: center;
+    justify-content: center;
+}

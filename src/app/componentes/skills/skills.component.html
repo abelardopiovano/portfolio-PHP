@@ -1,0 +1,30 @@
+<br>
+
+<div id="skills">
+    <h2 class="heading" style="color: rgb(168, 187, 204);">HABILIDADES</h2>
+</div>
+<div class="separador">
+    <a [ngClass]="{'editorbtn1':valida2,'editorbtn2':!valida2}" [routerLink]="['/agrega-habilidades']"><i class="fa-solid fa-plus fa-2xl"></i></a>
+</div>
+    
+<div class="caja1">
+    <div class="caja2">
+        <div *ngFor="let habilidades of HabilidadesList">
+            <div class="caja3">
+                <div class="barra">
+                    <a><i  class="fa-solid fa-minus fa-2xl" style="visibility:hidden ;"></i></a>
+                    <h6>
+                        {{habilidades.habilidad}}
+                    </h6>
+                    <a [ngClass]="{'editorbtn1':valida2,'editorbtn2':!valida2}" (click)="borraHabilidades(habilidades)" [routerLink]="['']"><i class="fa-solid fa-minus fa-2xl"></i></a>
+                </div>
+
+                <div class="caja4" >
+                    <img class="imagen1" src={{habilidades.url_habilidad}}>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

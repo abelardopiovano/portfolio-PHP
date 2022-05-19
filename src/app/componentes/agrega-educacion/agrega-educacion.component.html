@@ -1,0 +1,43 @@
+
+<br>
+<div class="div1">
+
+
+
+
+<form  (ngSubmit)="agregaEducacion(formulario)" #formulario="ngForm" novalidate>
+    
+    <div class="form-group" style="visibility:hidden">
+      
+        <input name="id" type="number" class="form-control" id="id"  ngModel={{educacion.id}} >
+        
+    </div>
+     
+    <div class="form-group">
+      
+      <input name="nombreInst"  type="text" class="form-control" id="nombreInst" aria-describedby="emailHelp" ngModel={{educacion.nombreInst}} placeholder="NOMBRE DE LA INSTITUCIÓN">
+      
+    </div>
+    <div class="form-group">
+        
+        <input name="titulo" type="text" class="form-control" id="titulo" aria-describedby="emailHelp" ngModel={{educacion.titulo}}  placeholder="TÍTULO OBTENIDO">
+        
+    </div>
+    <div class="form-group">
+        
+        <input name="descripcion" type="text" class="form-control" id="descripcion" aria-describedby="emailHelp" ngModel={{educacion.descripcion}}  placeholder="DESCRIPCIÓN">
+        
+    </div>
+    <!--
+    <div class="form-group">
+        
+        <input  name="persona_id" type="number" class="form-control" id="persona_id" ngModel={{educacion.persona_id}}  placeholder="Persoan id">
+        
+    </div>
+    -->
+    
+    <button style="margin: 10px 10px 10px 0px ;" type="submit" class="btn btn-primary" > GUARDAR</button>
+    
+    <button  type="button" class="btn btn-primary" [routerLink]="['/educacion']"> CERRAR</button>
+</form>
+</div>
