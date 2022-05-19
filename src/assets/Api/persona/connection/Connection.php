@@ -5,17 +5,17 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Allow: GET, POST, OPTIONS, PUT, DELETE");
     class Connection extends Mysqli
     {
-/*
+
         private $host     = 'localhost';
         private $user     = 'root';
         private $password = 'tesla378';
         private $database = 'portfolio_abelardo_piovano';
-*/
+/*
         private $host     = 'sql107.eshost.com.ar';
         private $user     = 'eshos_22562986';
         private $password = 'Morpheus37878';
         private $database = 'eshos_22562986_portfolio_abelardo_piovano';
-
+*/
         function __construct()
         {
             parent::__construct($this->host,$this->user,$this->password,$this->database);
