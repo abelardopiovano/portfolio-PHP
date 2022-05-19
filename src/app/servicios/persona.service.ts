@@ -22,7 +22,7 @@ export class PersonaService {
   
   
   
-  url: string ="http://localhost:/assets/Api/";
+  url: string ="http://localhost/assets/Api/";
   //url: string ="http://www.portfolio-api.eshost.com.ar/Api/";
   constructor(
     private http:HttpClient
