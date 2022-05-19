@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
 {
 
 
-  if (this.usuario==="ARGENTINA" && this.password ==="PROGRAMA")
+  if (this.usuario==="FANTASMA" && this.password ==="MORPHEUS")
     {
             
         GlobalConstant.valida=!GlobalConstant.valida

@@ -5,6 +5,7 @@ import { NgForm } from '@angular/forms';
 import { Persona} from '../../modelos/persona';
 import { __importDefault } from 'tslib';
 import { Router } from '@angular/router';
+import { GlobalConstant } from 'src/app/GlobalConstant';
 
 const httpOptions ={
   headers: new HttpHeaders({
@@ -43,6 +44,7 @@ export class EditaPersonaComponent implements OnInit {
 
   modificaPersona(formulario:NgForm)
   {
+  
   this.personaService.putPersonas(formulario.value).subscribe();
   this.router.navigate(['/']);
   }
