@@ -74,6 +74,7 @@
           "configurations": {
             "production": {
               "browserTarget": "Front-End-Angular:build:production"
+              
             },
             "development": {
               "browserTarget": "Front-End-Angular:build:development"

@@ -22,10 +22,10 @@ export class PersonaService {
   
   
   
-  url: string ="http://localhost/assets/Api/";
-  //url: string ="http://www.portfolio-api.eshost.com.ar/Api/";
+  url: string ="/Api/";
+  //url: string ="http://www.abelardopiovano.eshost.com.ar/Api/";
   constructor(
-    private http:HttpClient
+    public http:HttpClient
   ) { }
 
 
@@ -65,7 +65,8 @@ export class PersonaService {
     persona.id=GlobalConstant.id;
      //console.log("put")
     //const url2 = this.url + 'persona/'+ GlobalConstant.id
-    return this.http.put<any>(this.url+"persona/?id="+GlobalConstant.id,persona,httpOptions)
+    return this.http.put<Persona>(this.url+"persona/?id="+GlobalConstant.id,persona,httpOptions)
+    
     
   }
 

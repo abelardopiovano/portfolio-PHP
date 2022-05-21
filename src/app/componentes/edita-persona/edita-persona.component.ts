@@ -7,13 +7,14 @@ import { __importDefault } from 'tslib';
 import { Router } from '@angular/router';
 import { GlobalConstant } from 'src/app/GlobalConstant';
 
+
 const httpOptions ={
   headers: new HttpHeaders({
     'Content-Type':'application/json'
   })
   }
 
-
+  
 @Component({
   selector: 'app-edita-persona',
   templateUrl: './edita-persona.component.html',
@@ -22,7 +23,6 @@ const httpOptions ={
 export class EditaPersonaComponent implements OnInit {
   persona={id:0, nombre:"", descripcion:"",url_cv:""}
   
- 
 
 
   constructor(
