@@ -22,8 +22,9 @@ export class PersonaService {
   
   
   
-  url: string ="/Api/";
-  //url: string ="http://www.abelardopiovano.eshost.com.ar/Api/";
+  //url: string ="http://localhost/Api4/api/";
+  //url: string ="http://www.abelardopiovano.eshost.com.ar/Api4/api/";
+  url: string ="./Api4/api/";
   constructor(
     public http:HttpClient
   ) { }
@@ -33,7 +34,7 @@ export class PersonaService {
   getPersona(): Observable<any>
   {
     
-    return this.http.get<any>(this.url+"persona/?id="+GlobalConstant.id)
+    return this.http.get<any>(this.url+"persona/"+GlobalConstant.id)
   }
 
   getExperiencia(): Observable<any>
@@ -62,10 +63,10 @@ export class PersonaService {
 
   putPersonas(persona:Persona): Observable<Persona>
   { 
-    persona.id=GlobalConstant.id;
+    //persona.id=GlobalConstant.id;
      //console.log("put")
     //const url2 = this.url + 'persona/'+ GlobalConstant.id
-    return this.http.put<Persona>(this.url+"persona/?id="+GlobalConstant.id,persona,httpOptions)
+    return this.http.put<Persona>(this.url+"persona/"+GlobalConstant.id,persona,httpOptions)
     
     
   }

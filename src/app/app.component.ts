@@ -9,7 +9,7 @@ import { GlobalConstant } from './GlobalConstant';
 
 
 export class AppComponent {
-  title = 'Front-End-Angular';
+  title = 'Abelardo H. Piovano';
   valida2=GlobalConstant.valida;
   constructor(){
     //console.log(GlobalConstant.valida)
