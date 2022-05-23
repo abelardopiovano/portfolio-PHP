@@ -22,9 +22,10 @@ export class PersonaService {
   
   
   
-  //url: string ="http://localhost/Api4/api/";
-  //url: string ="http://www.abelardopiovano.eshost.com.ar/Api4/api/";
-  url: string ="./Api4/api/";
+  url: string ="/Api/";
+  //url: string ="http://abelardopiovano.eshost.com.ar/Api4/api/";
+  //url: string ="/Api3/";
+  //url: string ="Api4/api/";
   constructor(
     public http:HttpClient
   ) { }
@@ -34,7 +35,7 @@ export class PersonaService {
   getPersona(): Observable<any>
   {
     
-    return this.http.get<any>(this.url+"persona/"+GlobalConstant.id)
+    return this.http.get<any>(this.url+"persona/?id="+GlobalConstant.id)
   }
 
   getExperiencia(): Observable<any>
@@ -63,10 +64,10 @@ export class PersonaService {
 
   putPersonas(persona:Persona): Observable<Persona>
   { 
-    //persona.id=GlobalConstant.id;
+    persona.id=GlobalConstant.id;
      //console.log("put")
     //const url2 = this.url + 'persona/'+ GlobalConstant.id
-    return this.http.put<Persona>(this.url+"persona/"+GlobalConstant.id,persona,httpOptions)
+    return this.http.put<Persona>(this.url+"persona/?id="+GlobalConstant.id,persona,httpOptions)
     
     
   }
@@ -81,17 +82,19 @@ export class PersonaService {
 
   putExperiencia(experiencia:Experiencia): Observable<Experiencia>
   { 
+    experiencia.id=GlobalConstant.id;
      //console.log("put")
     //const url2 = this.url + 'experiencia/'+ '1'
-    return this.http.put<Experiencia>(this.url+"experiencia/"+GlobalConstant.max,experiencia,httpOptions)
+    return this.http.put<Experiencia>(this.url+"experiencia/?id="+GlobalConstant.max,experiencia,httpOptions)
     
   }
 
   postExperiencia(experiencia:Experiencia): Observable<Experiencia>
   { 
+    //experiencia.id=GlobalConstant.max;
      //console.log("post")
     //const url2 = this.url + 'experiencia/'+ '1'
-    return this.http.post<Experiencia>(this.url+"experiencia",experiencia,httpOptions)
+    return this.http.post<Experiencia>(this.url+"experiencia/",experiencia,httpOptions)
     
   }
 
@@ -100,7 +103,7 @@ export class PersonaService {
      //console.log("delete")
      
     //const url2 = this.url + 'experiencia/'+ '1'
-    return this.http.delete<Experiencia>(this.url+"experiencia/"+experiencia.id,httpOptions)
+    return this.http.delete<Experiencia>(this.url+"experiencia/?id="+experiencia.id,httpOptions)
     
   }
   

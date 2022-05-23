@@ -8,7 +8,7 @@ export interface Persona {
 export interface Experiencia
 {
     id:number;
-    nombreEmpresa:string;
+    nombre_empresa:string;
     cargo:string;
     descripcion:string;
     persona_id:number;

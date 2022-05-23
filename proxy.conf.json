@@ -1,0 +1,10 @@
+{
+    "/Api/*": {
+      "target": "http://www.abelardopiovano.eshost.com.ar",
+      
+      "secure": true,
+      "logLevel":"debug",
+      "changeOrigin": true
+      
+    }
+  }

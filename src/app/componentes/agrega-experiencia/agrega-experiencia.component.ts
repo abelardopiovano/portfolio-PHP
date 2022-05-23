@@ -21,7 +21,7 @@ const httpOptions ={
 export class AgregaExperienciaComponent implements OnInit {
   ExperienciaList:any;
   
-  experiencia={id:0, nombreEmpresa:"", cargo:"",descripcion:"",persona_id:0};
+  experiencia={id:0, nombre_empresa:"", cargo:"",descripcion:"",persona_id:0};
   
   
 

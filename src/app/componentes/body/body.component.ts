@@ -36,7 +36,8 @@ export class BodyComponent implements OnInit {
 
     this.personaService.getPersona().subscribe( data=>{
       
-      this.persona=data
+      this.persona=(data);
+      //console.log(data);
       
       
       
