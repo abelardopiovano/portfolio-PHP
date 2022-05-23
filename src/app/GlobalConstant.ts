@@ -11,4 +11,5 @@ export class GlobalConstant
   static cont:number;
   static max:number;
   static id:number;
+  static data:[any];
 }

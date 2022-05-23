@@ -62,12 +62,14 @@ export class PersonaService {
     
   }
 
-  putPersonas(persona:Persona): Observable<Persona>
+  putPersonas(persona:Persona): Observable<any>
   { 
+    console.log(GlobalConstant.data)
+   
     persona.id=GlobalConstant.id;
      //console.log("put")
     //const url2 = this.url + 'persona/'+ GlobalConstant.id
-    return this.http.put<Persona>(this.url+"persona/?id="+GlobalConstant.id,persona,httpOptions)
+    return this.http.put<any>(this.url+"persona/?id="+GlobalConstant.id,persona,httpOptions)
     
     
   }
@@ -76,7 +78,7 @@ export class PersonaService {
   { 
      //console.log("post")
     //const url2 = this.url + 'persona/'+ '1'
-    return this.http.post<any>(this.url+"persona",persona,httpOptions)
+    return this.http.post<Persona>(this.url+"persona",persona,httpOptions)
     
   }
 

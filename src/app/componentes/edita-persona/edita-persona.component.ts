@@ -21,6 +21,7 @@ const httpOptions ={
   styleUrls: ['./edita-persona.component.css']
 })
 export class EditaPersonaComponent implements OnInit {
+  
   persona={id:0, nombre:"", descripcion:"",url_cv:""}
   
 
@@ -33,8 +34,11 @@ export class EditaPersonaComponent implements OnInit {
   ngOnInit(): void {
     this.personaService.getPersona().subscribe( data=>{
       //console.log(data);
-      this.persona=data;
       
+      this.persona=data[GlobalConstant.id-1];
+      //this.dato=data;
+      GlobalConstant.data=data;
+    //console.log(GlobalConstant.data)
   });
 
 }
@@ -44,9 +48,20 @@ export class EditaPersonaComponent implements OnInit {
 
   modificaPersona(formulario:NgForm)
   {
+    GlobalConstant.data[GlobalConstant.id-1]=formulario.value
+    //console.log(GlobalConstant.data[GlobalConstant.id-1])
+    //this.dato=formulario.value;
+    //console.log(this.dato[GlobalConstant.id-1])
+   //this.persona=formulario.value
+   //console.log(GlobalConstant.data)
   
-  this.personaService.putPersonas(formulario.value).subscribe();
+    //console.log(data[GlobalConstant.id-1]);
+    //console.log(this.persona)
+   //console.log(this.data[GlobalConstant.id-1]);
+  //persona[GlobalConstant.id-1]=formulario.value;
+  this.personaService.putPersonas(GlobalConstant.data[GlobalConstant.id-1]).subscribe();
   this.router.navigate(['/']);
+  
   }
 
  

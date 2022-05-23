@@ -36,8 +36,8 @@ export class BodyComponent implements OnInit {
 
     this.personaService.getPersona().subscribe( data=>{
       
-      this.persona=(data);
-      //console.log(data);
+      this.persona=(data[GlobalConstant.id-1]);
+      //console.log(data[GlobalConstant.id-1]);
       
       
       
