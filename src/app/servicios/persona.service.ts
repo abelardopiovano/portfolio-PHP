@@ -64,7 +64,7 @@ export class PersonaService {
 
   putPersonas(persona:Persona): Observable<any>
   { 
-    console.log(GlobalConstant.data)
+    //console.log(GlobalConstant.data)
    
     persona.id=GlobalConstant.id;
      //console.log("put")
