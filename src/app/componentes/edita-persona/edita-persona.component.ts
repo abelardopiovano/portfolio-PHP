@@ -49,7 +49,8 @@ export class EditaPersonaComponent implements OnInit {
 
   modificaPersona(formulario:NgForm)
   {
-    //GlobalConstant.data[GlobalConstant.id-1]=formulario.value
+    //persona.id=GlobalConstant.id;
+    GlobalConstant.data[GlobalConstant.id-1]=formulario.value
     //console.log(GlobalConstant.data[GlobalConstant.id-1])
     //this.dato=formulario.value;
     //console.log(this.dato[GlobalConstant.id-1])
@@ -60,8 +61,8 @@ export class EditaPersonaComponent implements OnInit {
     //console.log(this.persona)
    //console.log(this.data[GlobalConstant.id-1]);
   //persona[GlobalConstant.id-1]=formulario.value;
-  this.personaService.putPersonas(formulario.value).subscribe();
-  //this.personaService.putPersonas(GlobalConstant.data[GlobalConstant.id-1]).subscribe();
+  //this.personaService.putPersonas(formulario.value).subscribe();
+  this.personaService.putPersonas(GlobalConstant.data[GlobalConstant.id-1]).subscribe();
   this.router.navigate(['/']);
   
   }
