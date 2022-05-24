@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient,HttpHeaders} from '@angular/common/http';
+import { HttpHeaders} from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { PersonaService } from '../../servicios/persona.service';
 import { Router } from '@angular/router';
 import { GlobalConstant } from '../../GlobalConstant';
-import { ThisReceiver } from '@angular/compiler';
-import { throwError } from 'rxjs';
+
 
 const httpOptions ={
   headers: new HttpHeaders({
@@ -34,25 +33,13 @@ export class AgregaExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     
-    //this.personaService.getPersonas().subscribe( data=>{
-      //this.persona={id:1, nombre:"n1",descripcion:"d1",url_cv:"w1"}
-      //data=data.stringify
-      //this.persona=data
-      //Number(this.experiencia.id=GlobalConstant.max)+1;
-      //this.experiencia.persona_id=Number(this.persona.id);
-      //this.experiencia.persona_id=(this.persona.id);
-      //console.log(this.persona)
-      //console.log(data)
-      //console.log(this.experiencia.id)
-
-    //});
+    
 
     this.personaService.getExperiencia().subscribe( data=>{
-      //console.log(data)
+      
       this.experiencia.id=GlobalConstant.max;
       this.experiencia.persona_id=GlobalConstant.id;
-      //this.experiencia.persona_id=Number(this.persona.id);
-      //Number(this.experiencia.id)
+      
     });
 
     

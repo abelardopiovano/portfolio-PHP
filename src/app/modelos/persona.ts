@@ -29,7 +29,7 @@ export interface Proyecto
 {
     id:number;
     url_imagen:string;
-    nombreProyecto:string;
+    nombre_proyecto:string;
     descripcion:string;
     url_proyecto:string;
     persona_id:number;

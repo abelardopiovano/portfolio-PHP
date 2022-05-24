@@ -27,8 +27,7 @@ export class ProyectsComponent implements OnInit {
     GlobalConstant.max=0;
 
     this.personaService.getPersona().subscribe( data=>{
-      this.persona=data
-      GlobalConstant.id=this.persona.id;
+      this.persona=(data[GlobalConstant.id-1]);
     });
 
 

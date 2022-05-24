@@ -21,7 +21,7 @@ export class AgregaProyectoComponent implements OnInit {
 
   ExperienciaList:any;
   
-  proyecto={id:0, url_imagen:"", nombreProyecto:"",descripcion:"",url_proyecto:"",persona_id:0};
+  proyecto={id:0, url_imagen:"", nombre_proyecto:"",descripcion:"",url_proyecto:"",persona_id:0};
 
   constructor(
     public router: Router,
@@ -34,8 +34,7 @@ export class AgregaProyectoComponent implements OnInit {
       
       this.proyecto.id=GlobalConstant.max;
       this.proyecto.persona_id=GlobalConstant.id;
-      //this.experiencia.persona_id=Number(this.persona.id);
-      //Number(this.experiencia.id)
+      
     });
 
 

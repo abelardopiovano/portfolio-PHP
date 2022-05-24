@@ -153,7 +153,7 @@ export class PersonaService {
   { 
      //console.log("post")
     //const url2 = this.url + 'experiencia/'+ '1'
-    return this.http.post<Proyecto>(this.url+"proyecto",proyecto,httpOptions)
+    return this.http.post<Proyecto>(this.url+"proyecto/",proyecto,httpOptions)
     
   }
 
@@ -162,7 +162,7 @@ export class PersonaService {
      //console.log("delete")
      
     //const url2 = this.url + 'experiencia/'+ '1'
-    return this.http.delete<Proyecto>(this.url+"proyecto/"+proyecto.id,httpOptions)
+    return this.http.delete<Proyecto>(this.url+"proyecto/?id="+proyecto.id,httpOptions)
     
   }
 
