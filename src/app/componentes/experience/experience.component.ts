@@ -33,6 +33,7 @@ export class ExperienceComponent implements OnInit {
     this.personaService.getPersona().subscribe( data=>{
       
       this.persona=(data[GlobalConstant.id-1]);
+      
     });
 
 
@@ -66,7 +67,7 @@ export class ExperienceComponent implements OnInit {
     
 
 
-
+    
    
   }
 
@@ -78,12 +79,12 @@ export class ExperienceComponent implements OnInit {
       {
         this.personaService.borraExperiencia(experiencia).subscribe();
         //this.router.navigate(['/experiencia']);
-        location.reload()
+        location.reload();
       }
       else
       {
         //this.router.navigate(['/experiencia']);
-        location.reload()
+        //location.reload()
       }
     
     //console.log("borrando");

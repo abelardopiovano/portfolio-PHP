@@ -33,6 +33,7 @@ export class EditaPersonaComponent implements OnInit {
   ) { }
   
   ngOnInit(): void {
+    GlobalConstant.id=1;
     this.personaService.getPersona().subscribe( data=>{
       //console.log(data);
       

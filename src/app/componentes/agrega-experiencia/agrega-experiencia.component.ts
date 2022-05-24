@@ -59,8 +59,9 @@ export class AgregaExperienciaComponent implements OnInit {
   //console.log(GlobalConstant.id)
   //this.personaService.putExperiencia(formulario.value).subscribe();
   this.personaService.postExperiencia(formulario.value).subscribe();
+  
   this.router.navigate(['/experiencia']);
-
+  
 
   }
 }

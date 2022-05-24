@@ -40,25 +40,25 @@ export class PersonaService {
 
   getExperiencia(): Observable<any>
   {
-    return this.http.get<Experiencia>(this.url+"experiencia")
-
+    return this.http.get<Experiencia>(this.url+"experiencia/")
+    
   }
 
   getProyecto(): Observable<any>
   {
-    return this.http.get<Proyecto>(this.url+"proyecto")
+    return this.http.get<Proyecto>(this.url+"proyecto/")
 
   }
 
   getEducacion(): Observable<any>
   {
-    return this.http.get<Educacion>(this.url+"educacion")
+    return this.http.get<Educacion>(this.url+"educacion/")
     
   }
 
   getHabilidades(): Observable<any>
   {
-    return this.http.get<Habilidades>(this.url+"habilidades")
+    return this.http.get<Habilidades>(this.url+"habilidades/")
     
   }
 
@@ -124,7 +124,7 @@ export class PersonaService {
   { 
      //console.log("post")
     //const url2 = this.url + 'experiencia/'+ '1'
-    return this.http.post<Educacion>(this.url+"educacion",educacion,httpOptions)
+    return this.http.post<Educacion>(this.url+"educacion/",educacion,httpOptions)
     
   }
 
@@ -133,7 +133,7 @@ export class PersonaService {
      //console.log("delete")
      
     //const url2 = this.url + 'experiencia/'+ '1'
-    return this.http.delete<Educacion>(this.url+"educacion/"+educacion.id,httpOptions)
+    return this.http.delete<Educacion>(this.url+"educacion/?id="+educacion.id,httpOptions)
     
   }
 
@@ -182,7 +182,7 @@ export class PersonaService {
   { 
      //console.log("post")
     //const url2 = this.url + 'experiencia/'+ '1'
-    return this.http.post<Habilidades>(this.url+"habilidades",habilidades,httpOptions)
+    return this.http.post<Habilidades>(this.url+"habilidades/",habilidades,httpOptions)
     
     
   }
@@ -192,10 +192,10 @@ export class PersonaService {
      //console.log("delete")
      
     //const url2 = this.url + 'experiencia/'+ '1'
-    return this.http.delete<Habilidades>(this.url+"habilidades/"+habilidades.id,httpOptions)
+    return this.http.delete<Habilidades>(this.url+"habilidades/?id="+habilidades.id,httpOptions)
     
   }
 
   //-------------------------------------------------------------------------------------------
-
+  
 }

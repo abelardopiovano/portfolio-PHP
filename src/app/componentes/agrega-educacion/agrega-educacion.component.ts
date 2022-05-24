@@ -19,7 +19,7 @@ const httpOptions ={
 export class AgregaEducacionComponent implements OnInit {
   EducacionList:any;
   
-  educacion={id:0, nombreInst:"", titulo:"",descripcion:"",persona_id:0};
+  educacion={id:0, nombre_inst:"", titulo:"",descripcion:"",persona_id:0};
   constructor(
     public router: Router,
     private personaService: PersonaService
