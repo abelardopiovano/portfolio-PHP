@@ -1,6 +1,6 @@
 {
     "/Api/*": {
-      "target": "http://localhost",
+      "target": "http://www.abelardopiovano.eshost.com.ar",
       
       "secure": false,
       "logLevel":"debug",
