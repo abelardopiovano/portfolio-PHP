@@ -2,7 +2,7 @@
     "/Api/*": {
       "target": "http://localhost",
       
-      "secure": true,
+      "secure": false,
       "logLevel":"debug",
       "changeOrigin": true
       

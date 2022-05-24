@@ -31,16 +31,8 @@ export class ExperienceComponent implements OnInit {
     GlobalConstant.max=0;
     
     this.personaService.getPersona().subscribe( data=>{
-      //this.persona={id:1, nombre:"n1",descripcion:"d1",url_cv:"w1"}
-      //data=data.stringify
-      this.persona=data
-      //Number(this.experiencia.id=GlobalConstant.max)+1;
-      //this.experiencia.persona_id=Number(this.persona.id);
-      //this.experiencia.persona_id=(this.persona.id);
-      //console.log(this.persona)
-      //console.log(data)
-      //console.log(this.experiencia.id)
-      GlobalConstant.id=this.persona.id;
+      
+      this.persona=(data[GlobalConstant.id-1]);
     });
 
 
@@ -85,10 +77,12 @@ export class ExperienceComponent implements OnInit {
     if (confirm("Esta por borrar un registo, desea continuar?"))
       {
         this.personaService.borraExperiencia(experiencia).subscribe();
+        //this.router.navigate(['/experiencia']);
         location.reload()
       }
       else
       {
+        //this.router.navigate(['/experiencia']);
         location.reload()
       }
     
