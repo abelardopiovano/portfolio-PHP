@@ -77,10 +77,12 @@ export class ExperienceComponent implements OnInit {
     if (confirm("Esta por borrar un registo, desea continuar?"))
       {
         this.personaService.borraExperiencia(experiencia).subscribe();
+        //this.router.navigate(['/experiencia']);
         location.reload()
       }
       else
       {
+        //this.router.navigate(['/experiencia']);
         location.reload()
       }
     
