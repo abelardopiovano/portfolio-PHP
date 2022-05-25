@@ -25,7 +25,9 @@ export class SkillsComponent implements OnInit {
     
     this.personaService.getPersona().subscribe( data=>{
       
-      this.persona=(data[GlobalConstant.id-1]);
+      this.persona=data
+      
+      GlobalConstant.id=this.persona.id;
     });
 
     this.personaService.getHabilidades().subscribe( data=>{

@@ -84,7 +84,7 @@ export class PersonaService {
 
   putExperiencia(experiencia:Experiencia): Observable<Experiencia>
   { 
-   
+    experiencia.id=GlobalConstant.id;
      //console.log("put")
     //const url2 = this.url + 'experiencia/'+ '1'
     return this.http.put<Experiencia>(this.url+"experiencia/?id="+GlobalConstant.max,experiencia,httpOptions)
@@ -122,7 +122,6 @@ export class PersonaService {
 
   postEducacion(educacion:Educacion): Observable<Educacion>
   { 
-    
      //console.log("post")
     //const url2 = this.url + 'experiencia/'+ '1'
     return this.http.post<Educacion>(this.url+"educacion/",educacion,httpOptions)
