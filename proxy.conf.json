@@ -1,6 +1,6 @@
 {
     "/Api/*": {
-      "target": "http://localhost",
+      "target": "http://www.abelardopiovano.mendoza.gov.ar",
       
       "secure": false,
       "logLevel":"debug",
