@@ -85,7 +85,7 @@ export class ExperienceComponent implements OnInit {
         this.personaService.borraExperiencia(experiencia).subscribe();
         
         location.reload();
-        //this.router.navigate(['/experiencia']);
+        
         
 
     
