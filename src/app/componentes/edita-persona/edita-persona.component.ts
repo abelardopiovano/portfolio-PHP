@@ -1,8 +1,8 @@
 import { Component, OnInit,inject, Output, Input } from '@angular/core';
-import { HttpClient,HttpHeaders} from '@angular/common/http';
+import { HttpHeaders} from '@angular/common/http';
 import { PersonaService } from '../../servicios/persona.service';
 import { NgForm } from '@angular/forms';
-import { Persona} from '../../modelos/persona';
+
 import { __importDefault } from 'tslib';
 import { Router } from '@angular/router';
 import { GlobalConstant } from 'src/app/GlobalConstant';

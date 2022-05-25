@@ -1,7 +1,7 @@
-import { identifierName } from '@angular/compiler';
+
 import { Component, Input, OnInit } from '@angular/core';
-import { NgForm, NgModel} from '@angular/forms';
-import { NavigationStart, RouteConfigLoadStart, RouterLink } from '@angular/router';
+
+
 import { GlobalConstant } from '../../GlobalConstant';
 import { Router } from '@angular/router';
 @Component({
