@@ -1,3 +1,4 @@
+ 
 import { Component,OnInit } from '@angular/core';
 import { GlobalConstant } from './GlobalConstant';
 
@@ -18,7 +19,7 @@ export class AppComponent {
   ngOnInit(){
     
 
-
+    
     
     
   }
