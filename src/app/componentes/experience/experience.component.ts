@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 
 
 
+
+
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
@@ -66,7 +68,7 @@ export class ExperienceComponent implements OnInit {
       
     });
     
-  
+    
     
 
 
@@ -81,34 +83,16 @@ export class ExperienceComponent implements OnInit {
     if (confirm("Esta por borrar un registo, desea continuar?"))
       {
         this.personaService.borraExperiencia(experiencia).subscribe();
-        //this.router.navigate(['/experiencia']);
-
+        
         location.reload();
-
-    
-
-      }
-      else
-      {
         //this.router.navigate(['/experiencia']);
+        
 
-        //location.reload()
-
-        location.reload()
+    
 
       }
+         
     
-    //console.log("borrando");
-    //this.personaService.borraExperiencia(experiencia).subscribe();
-    
-    //this.router.navigate(['/experiencia']);
-  
-  //this.personaService.borraExperiencia(experiencia).subscribe();
-  
-  //console.log("borrando");
-  
-  //this.router.navigate(['/experiencia']);
-  //location.reload;
   
   }
 
