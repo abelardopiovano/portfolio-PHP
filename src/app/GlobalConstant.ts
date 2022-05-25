@@ -1,7 +1,7 @@
 export class GlobalConstant
 {
    
-  static valida: boolean= false;
+  static valida: boolean= true;
   static cuentaExperiencia: number;
   static numExperiencia:number;
   static cuentaEducacion: number;
