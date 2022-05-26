@@ -5,37 +5,35 @@
 
         
          
-            <header>
+            <header id="menumobil" [ngClass]="{'active':valor,'noactive':valor}">
                 
                     
                     
                 
                   
-                <div id="mobile-menu-close">
-                    <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-                </div>
+                
                   
                 <ul id="menu" class="shadow">
                     <li>
-                        <a [routerLink]="['/']" >Sobre Mí</a>
+                        <a [routerLink]="['/']" (click)="cerrar()" >Sobre Mí</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/experiencia']">Experiencia</a>
+                        <a [routerLink]="['/experiencia']"(click)="cerrar()">Experiencia</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/educacion']">Educación</a>
+                        <a [routerLink]="['/educacion']"(click)="cerrar()">Educación</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/proyectos']" >Proyectos</a>
+                        <a [routerLink]="['/proyectos']" (click)="cerrar()">Proyectos</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/habilidades']" >Habilidades</a>
+                        <a [routerLink]="['/habilidades']"(click)="cerrar()" >Habilidades</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/contacto']">Contacto</a>
+                        <a [routerLink]="['/contacto']"(click)="cerrar()">Contacto</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/ingresar']" >Ingresar</a>
+                        <a [routerLink]="['/ingresar']" (click)="cerrar()">Ingresar</a>
                     </li>
                 </ul>
                 
@@ -43,7 +41,8 @@
             
      
 
-
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="../../../assets/js/scripts.min.js"></script>
 
 
 

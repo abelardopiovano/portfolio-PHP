@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+
+
+import { Component, OnInit} from '@angular/core';
 
 
 
@@ -9,17 +11,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent implements OnInit {
-  
-  
-  
-  constructor() { }
 
-  ngOnInit(): void {
+
+export class HeaderComponent implements OnInit {
+
+  
+  
+  constructor() { 
     
+  }
+  
+  public valor: boolean = false;
+  ngOnInit(): void {
+
+   
+        console.log (this.valor)
+      
+  
 
   }
  
+  cerrar():void
+  {
+    
+    this.valor=!this.valor;
+    
+  
+      
+    }
+  
+      
+    
+
   
   
 
