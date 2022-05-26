@@ -12,4 +12,5 @@ export class GlobalConstant
   static max:number;
   static id:number;
   static data:[any];
+  static cambiaclass: boolean;
 }

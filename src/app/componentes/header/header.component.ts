@@ -1,8 +1,8 @@
-
+import { GlobalConstant } from 'src/app/GlobalConstant';
 
 import { Component, OnInit} from '@angular/core';
 
-
+GlobalConstant.cambiaclass = false;
 
 
 @Component({
@@ -21,11 +21,11 @@ export class HeaderComponent implements OnInit {
     
   }
   
-  public valor: boolean = false;
-  ngOnInit(): void {
+  valor:boolean=GlobalConstant.cambiaclass;
+    ngOnInit(): void {
 
    
-        console.log (this.valor)
+        
       
   
 
@@ -35,10 +35,11 @@ export class HeaderComponent implements OnInit {
   {
     
     this.valor=!this.valor;
-    
+    GlobalConstant.cambiaclass=this.valor;
+    console.log (GlobalConstant.cambiaclass)
   
-      
-    }
+  
+  }
   
       
     

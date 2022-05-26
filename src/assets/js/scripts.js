@@ -81,7 +81,7 @@
 
     // Open mobile menu
     $('#mobile-menu-open').click(function() {
-        $('header, body').addClass('active');
+        $('header').addClass('active');
     });
 
     // Close mobile menu
