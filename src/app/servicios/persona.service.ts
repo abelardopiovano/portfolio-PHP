@@ -23,7 +23,7 @@ export class PersonaService {
   
   
   url: string ="/Api/";
-  //url: string ="http://abelardopiovano.eshost.com.ar/Api4/api/";
+  //url: string ="http://abelardopiovanoapi.eshost.com.ar/Api/";
   //url: string ="/Api3/";
   //url: string ="Api4/api/";
   constructor(
