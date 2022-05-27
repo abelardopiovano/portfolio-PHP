@@ -1,11 +1,6 @@
 <?php
 
-<<<<<<< HEAD
     require "../connection/cors.php";
-=======
-    require "cors.php";
-
->>>>>>> refs/remotes/origin/main
     class Connection extends Mysqli
     {
 
